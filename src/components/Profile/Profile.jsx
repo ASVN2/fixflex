@@ -1,0 +1,5 @@
+const Profile = function () {
+  return <div className="text-white">Profile</div>;
+};
+
+export default Profile;
