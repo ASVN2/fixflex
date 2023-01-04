@@ -1,14 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
-import { Movie, Profile, Navbar } from '.';
+import { Movies, Profile, Navbar, Sidebar } from '.';
 
 function App() {
   return (
-    <div className="main">
+    <div className="main ">
       <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Movie />} />
-        <Route path="/" element={<Profile />} />
-      </Routes>
+      <Sidebar />
+      <div className="contant  md:ml-[240px] lg:ml-[240px] xl:ml-[240px]">
+        <Routes>
+          <Route exact path="/" element={<Movies />} />
+          {/* <Route path="/" element={<Movie />} />
+        <Route path="/" element={<Profile />} /> */}
+        </Routes>
+      </div>
     </div>
   );
 }
